@@ -93,11 +93,14 @@
 
           devShells.default = pkgs.mkShell {
             packages = [
-              # Rust
+              # Rust-lang, with cargo, rustc and etc.
               rust
 
-              # Nix
+              # Nix LSP
               pkgs.nil
+
+              # For audio debugging
+              pkgs.audacity
             ];
 
             shellHook = ''
