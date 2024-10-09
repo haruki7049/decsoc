@@ -1,1 +1,2 @@
-# reproedit
+# decsoc
+A "DEClarative SOund Creator".

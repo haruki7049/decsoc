@@ -35,7 +35,7 @@
           cargoArtifacts = craneLib.buildDepsOnly {
             inherit src;
           };
-          proed = craneLib.buildPackage {
+          decsoc = craneLib.buildPackage {
             inherit src cargoArtifacts;
             strictDeps = true;
 
@@ -76,14 +76,14 @@
           };
 
           packages = {
-            inherit proed llvm-cov llvm-cov-text;
-            default = proed;
+            inherit decsoc llvm-cov llvm-cov-text;
+            default = decsoc;
             doc = cargo-doc;
           };
 
           checks = {
             inherit
-              proed
+              decsoc
               cargo-clippy
               cargo-doc
               llvm-cov
